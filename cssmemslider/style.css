@@ -1,0 +1,201 @@
+body{
+    background: rgb(50, 42, 42);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+    gap: 1.5rem;
+}
+
+.container input {
+    visibility: hidden;
+}
+
+.container span{
+    display: block;
+    font-family: 'Regular', cursive;
+    color: white;
+    font-size: 2rem;
+    margin-right: 0.2rem;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.foto{
+    min-width: 17rem;
+}
+.overflow{
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.images{
+    width: 600%;
+    display: flex;
+}
+.img{
+    width: 20%;
+    height: 10%;
+}
+.img img{
+    width: 100%;
+}
+
+.text-mem{
+    width: 19rem;
+    margin-left: 7rem;
+}
+.texts{
+    width: 600%;
+    display: flex;
+}
+.text{
+    width: 20%; 
+    font-family: 'Regular', cursive;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.switcher{
+    width: 19rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    margin-left: 10%;
+}
+
+.switcher label{
+    width: 2.3rem;
+    height: 2.3rem;
+    cursor: pointer;
+    margin-right: 2.1rem;
+}
+
+.switcher label span{
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 0.1rem solid white;
+    border-radius: 6rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.switcher label span:active{
+    border: 0.1rem solid rgb(30, 34, 225);
+    transition: all 1.2s;
+}
+.switcher label span:hover{
+    background-color: blue;
+    transition: all 1.2s;
+}
+
+#mem-1:checked ~ .switcher label:nth-child(1) span{
+    background-color: blue;
+}
+
+#mem-2:checked ~ .switcher label:nth-child(2) span{
+    background-color: blue;
+}
+
+#mem-3:checked ~ .switcher label:nth-child(3) span{
+    background-color: blue;
+}
+
+#mem-4:checked ~ .switcher label:nth-child(4) span{
+    background-color: blue;
+}
+
+#mem-5:checked ~ .switcher label:nth-child(5) span{
+    background-color: blue;
+}
+
+#mem-6:checked ~ .switcher label:nth-child(6) span{
+    background-color: blue;
+}
+
+#mem-1:checked ~ .foto .images{
+    margin-left: 0;
+}
+#mem-2:checked ~ .foto .images{
+    margin-left: -100%;
+}
+#mem-3:checked ~ .foto .images{
+    margin-left: -200%;
+}
+#mem-4:checked ~ .foto .images{
+    margin-left: -300%;
+}
+#mem-5:checked ~ .foto .images{
+    margin-left: -400%;
+}
+#mem-6:checked ~ .foto .images{
+    margin-left: -500%;
+}
+.foto .images{
+    transition: all 1.2s;
+}
+
+#mem-1:checked ~ .text-mem .texts{
+    margin-left: 0;
+}
+#mem-2:checked ~ .text-mem .texts{
+    margin-left: -100%;
+}
+#mem-3:checked ~ .text-mem .texts{
+    margin-left: -200%;
+}
+#mem-4:checked ~ .text-mem .texts{
+    margin-left: -300%;
+}
+#mem-5:checked ~ .text-mem .texts{
+    margin-left: -400%;
+}
+#mem-6:checked ~ .text-mem .texts{
+    margin-left: -500%;
+}
+.text-mem .texts{
+    transition: all 1.2s;
+}
+
+.text-mem .texts{
+    transition: all 1.2s;
+}
+
+@media (min-width: 1360px) {
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    .switcher{
+        order: 1;
+    }
+
+    .text-mem{
+        align-self: flex-start;
+        width: 50%;
+    }
+    .text{
+        text-align: left;
+    }
+}
